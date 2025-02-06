@@ -1,0 +1,13 @@
+[Unit]
+Description=Minecraft start kicker
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/minectaft-util
+Restart=always
+User=micra
+EnvironmentFile=/home/micra/micra-utils/.env
+
+[Install]
+WantedBy=multi-user.target
