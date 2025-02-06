@@ -17,6 +17,9 @@ fi
 
 install -Dm644 systemd/$service.service $unit_dir/$service.service
 
+touch /tmp/grafana_cpu.png
+chown nobody:nobody /tmp/grafana_cpu.png
+
 systemctl daemon-reload
 systemctl enable $service.service
 systemctl start $service.service
